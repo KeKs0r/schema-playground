@@ -1,34 +1,18 @@
-const schema = {
-    component: "List",
-    headline: "List Headline, whoop whoop",
-    children: [
-        {
-            component: "TextWidget",
-            text: "I am a sexy nugget Widget",
-        },
-        {
-            component: "TextWidget",
-            text: "Another Widget"
-        }
-    ]
-}
-
 const completeSchema = {
     component: "div",
     children: [
         {
             component: "MQTTContainer",
             topic: "@demo/messages",
-            children: [
-                {
-                    component: "List",
+            children: {
+                    component: "ListWidget",
                     itemKey: "data",
                     itemProps: {
-                        style: 'color:#440000'
-                    },
-                    //itemComponent: "ListItem"
+                        style: {
+                            backgroundColor: '#0000FF'
+                        }
+                    }
                 }
-            ]
         },
         {
             component: "FormContainer",
@@ -41,6 +25,7 @@ const completeSchema = {
                 },
                 {
                     component: "Button",
+                     label: "Send",
                     type: "submit"
                 }
             ]
@@ -48,4 +33,6 @@ const completeSchema = {
     ]
 }
 
-export default schema;
+
+
+export default completeSchema;

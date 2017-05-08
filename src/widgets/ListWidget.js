@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import List from '../components/List';
+import React, { Component} from 'react';
+import PropTypes from 'prop-types';
 import ListItem  from '../components/ListItem';
 
 
@@ -13,7 +13,7 @@ class ListWidget extends Component {
       const {itemKey, itemProps} = this.props;
       const key = itemKey || 'data';
       const itemData = this.props[key] || [];
-      const itemOut = itemData.map((d) => <ListItem {...itemProps} text={d}/>)
+      const itemOut = itemData.map((d) => <ListItem {...itemProps} text={d.text}/>)
     return (
         <ul>
             {itemOut}

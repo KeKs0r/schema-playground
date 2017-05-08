@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 //import { subscribe } from 'mqtt-react';
 import subscribe from '../temp_subscribe.js';
 
