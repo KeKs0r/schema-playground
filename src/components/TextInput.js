@@ -1,7 +1,8 @@
 import React from 'react';
+import TextField from 'material-ui/TextField';
 
 export default function TextInput({name}) {
     return (
-        <input type="text" name={name} />
+        <TextField type="text" name={name} />
     );
 }

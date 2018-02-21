@@ -5,14 +5,14 @@ const completeSchema = {
             component: "MQTTContainer",
             topic: "@demo/messages",
             children: {
-                    component: "ListWidget",
-                    itemKey: "data",
-                    itemProps: {
-                        style: {
-                            backgroundColor: '#0000FF'
-                        }
-                    }
+                component: "ListWidget",
+                itemKey: "data",
+                itemProps: {
                 }
+            }
+        },
+        {
+            component: "Divider"
         },
         {
             component: "FormContainer",
@@ -25,8 +25,9 @@ const completeSchema = {
                 },
                 {
                     component: "Button",
-                     label: "Send",
-                    type: "submit"
+                    label: "Send",
+                    type: "submit",
+                    primary: true
                 }
             ]
         }

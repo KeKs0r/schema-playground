@@ -1,7 +1,8 @@
 import React from 'react';
+import {ListItem} from 'material-ui/List';
 
-export default function ListItem({text, ...props}) {
+export default function MyListItem({text, ...props}) {
     return (
-        <li {...props}> {text} </li>
+        <ListItem {...props} primaryText={text} />
     );
 }
